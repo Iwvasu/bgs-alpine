@@ -10,13 +10,8 @@ license="MIT"
 depends="libx11 libxinerama imlib2"
 makedepends="libx11-dev libxinerama-dev imlib2-dev"
 subpackages="$pkgname-doc"
-source="https://tmpfiles.org/dl/171832/$pkgname-$pkgver.tar.gz"
-builddir="$srcdir/$pkgname-$pkgver/"
+source="$pkgname-$pkgver.tar.gz::https://github.com/Gottox/bgs/archive/refs/tags/v$pkgver.tar.gz"
 options="!check"
-
-prepare() {
-	default_prepare
-}
 
 build() {
 	cd "$builddir"
@@ -25,9 +20,9 @@ build() {
 
 package() {
 	cd "$builddir"
-	make DESTDIR="$pkgdir" install
+	make PREFIX=/usr DESTDIR="$pkgdir" install
 }
 
 sha512sums="
-82edfad9e3f56ca2b4f0a70e0be8d9d613a3524e8b48bf009d60770c4768f401c21614cad2e243998d1b96f4bca7f9ce6d58b5ec558b08f8b15eb688a0822185  bgs-0.8.tar.gz
+4f7aa32d9cf60252abfc87cf72c7bc20ac691af3684a0923d3e2a3506407bddee9d2e5f49da97a154ed2acf1a876b2952ab61dd412f2de39c1303e7551acaec8  bgs-0.8.tar.gz
 "
