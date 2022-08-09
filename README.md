@@ -8,10 +8,7 @@ I use Version 3.14, the package was compiled for it. Recommend compiling on your
 ## 🚀 Instalation
 
 ```
-sudo apk add --allow-untrusted bgs-0.8-r0.apk
-```
-```
-sudo apk add --allow-untrusted bgs-doc-0.8-r0.apk
+sudo apk add --allow-untrusted pkgname.apk
 ```
 
 ## 📝 License
